@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <!-- Если необходимо загрузить что либо только для одной страницы
+        а не для всего проекта
+        <f:loadBundle basename="web.nls" var="msk" </f:loadBundle>  
+        !-->
+        
+        <title> #{msg.index_title}</title>
+        <h:outputStylesheet library="css" name="index_style.css" />
+    </h:head>
+    <h:body>
+        <div id="content">
+            <div id = "head">
+                <p class = "logo"><h:graphicImage library="images" name="logo.png" width="60" height="80"/></p>
+            </div>
+
+            <div id = "main">
+                <div class = "txtarea">
+                    <p> #{msg.welcome_title} </p>
+                    <p> #{msg.input_info}</p>
+                </div>
+                <div class="clefttext">
+                    <h:form styleClass="login_form">
+                        #{msg.input_name} <h:inputText id="username" value="#{user.username}" required="true" requiredMessage="#{msg.login_required}">
+                    
+                            <f:validator validatorId="web.validators.LoginValidator"/>
+                        </h:inputText>
+                        <h:commandButton action="pages/book?faces-redirect=true" value="Войти"/>
+                        <br><h:message for="username" styleClass="error"/></br>
+                        
+                    </h:form>
+                </div>
+            </div>
+            
+            <div id="footer">
+                #{msg.author_info}
+            </div>
+        
+        </div>
+
+        
+    </h:body>
+</html>
+

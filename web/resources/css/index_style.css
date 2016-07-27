@@ -1,0 +1,72 @@
+#content{
+    margin: auto;
+    width: 600px;
+      
+}
+
+#head {
+    height: 100px;
+    width: 100%; 
+    border-style: solid; /* Стиль рамки вокруг параграфа */
+    border-width: 3px; /* Толщина границы */
+    border-color: blue;
+}
+
+.logo {
+    margin-left: 10px;
+    margin-top: 10px; 
+    width:100px;
+    height: 80px;
+}
+
+#main {
+    margin-left: 15%;
+    margin-top: 10px;
+    padding: 5px 10px;
+    width: 70%;
+    border-style: solid; /* Стиль рамки вокруг параграфа */
+    border-width: 3px; /* Толщина границы */
+    border-color: red;
+    border-radius:20px;
+    float: left ;
+
+
+}
+
+
+.txtarea{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14pt;
+    font-stretch: semi-expanded;
+
+
+}
+
+.clefttext {
+    margin-left: 10%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14pt;
+    color: blue;
+    font-stretch: expanded;
+    width: 80%;
+    
+
+}
+
+#footer {
+    float: left ;
+    margin-top: 20px;
+    margin-left: 40%;
+}
+
+.error {
+    margin-left: 15px;
+    color:red;
+    text-align: center;
+    font-style: italic;
+    font-size: 10pt;
+    font-stretch: normal;
+    
+    
+}
