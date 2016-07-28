@@ -239,3 +239,10 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
     padding: 3px;
     margin:3px;
 }
+
+.genres a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+}
