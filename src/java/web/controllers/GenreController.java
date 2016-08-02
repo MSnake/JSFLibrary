@@ -1,6 +1,4 @@
-package web.beans;
-
-
+package web.controllers;
 
 import java.io.Serializable;
 import java.sql.Connection;
@@ -12,18 +10,26 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import web.beans.Genre;
 import web.db.Database;
 
-@ManagedBean
+@ManagedBean(eager = true)
 @ApplicationScoped
-public class Genres implements Serializable{
+public class GenreController implements Serializable {
 
-    private ArrayList<Genre> genreList = new ArrayList<Genre>();
+    private ArrayList<Genre> genreList;
 
-    private ArrayList<Genre> getGenres() {
+    public GenreController() {
+        fillGenresAll();
+    }
+
+    private void fillGenresAll() {
         Statement stmt = null;
         ResultSet rs = null;
         Connection conn = null;
+
+        genreList = new ArrayList<Genre>();
+
         try {
             conn = Database.getConnection();
 
@@ -37,7 +43,7 @@ public class Genres implements Serializable{
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(Genres.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(GenreController.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 if (stmt != null) {
@@ -50,18 +56,13 @@ public class Genres implements Serializable{
                     conn.close();
                 }
             } catch (SQLException ex) {
-                Logger.getLogger(Genres.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(GenreController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
 
-        return genreList;
     }
 
     public ArrayList<Genre> getGenreList() {
-        if (!genreList.isEmpty()) {
-            return genreList;
-        } else {
-            return getGenres();
-        }
+        return genreList;
     }
 }

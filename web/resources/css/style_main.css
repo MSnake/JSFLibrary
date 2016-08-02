@@ -1,9 +1,4 @@
-ul.nav a, ul.nav a:visited { 
-    padding: 5px 5px 5px 15px;
-    display: block; 
-    text-decoration: none;
-    color: #000;
-}
+
 body {
     font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
     background-color: #EEE;
@@ -58,12 +53,15 @@ a:hover, a:active, a:focus {
     text-align: center;
     margin:5px;
     height: 50px;
+    float:left;
+    width: 100%;
 }
 
 
 .middle {
     background-color: #FFFFFF;
     width: 100%;
+    float:left;
 }
 
 .left_menu {
@@ -79,18 +77,20 @@ a:hover, a:active, a:focus {
 }
 
 
-ul.nav {
-    list-style: none; 
 
-    margin-bottom: 15px; 
-}
-ul.nav li {
-
-}
-ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
+.genres a:hover, a:active, a:focus {
     background-color: #FFFFFF;
     color: #999;
 }
+
+.genres a, a:visited { 
+    padding: 3px 3px 3px 15px;
+    display: block; 
+    text-decoration: none;
+    color: #000;
+    
+}
+
 
 
 
@@ -121,7 +121,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 
 .descr{
     float: left;
-    width: 600px;
+    width: 500px;
     text-align: left;
     padding-top: 50px;
 }
@@ -131,6 +131,11 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
     padding-top: 50px;
     font-weight: normal;
     float:right;
+}
+
+.welcome a{
+    margin-right: 15px;
+    font-size: 10px;
 }
 
 .search_button {
@@ -186,6 +191,35 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
     float:left;
 }
 
+.col1{
+    vertical-align: top;
+    width: 100px;
+}
+
+.col2{
+    vertical-align: top;
+    width: 240px;
+}
+
+.col2 a{
+    font-weight: bold;
+    color:#378de5;
+    font-size: 15px;
+}
+
+.col2 p{
+    font-size: 11px;
+}
+
+.col3{
+    vertical-align: top;
+    width: 350px;
+}
+
+.book_details p{
+    font-size: 11px;
+}
+
 .book_title a{
     color:#378de5 ;
     font-weight: bold; 
@@ -218,12 +252,16 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
     float:left;
     height: 20px;
     margin: 10px;
+    width: 100%;
+    text-align: center;
 }
 
 .letters a{
     text-decoration: none;
     font-size: 15px;
     font-weight: bold;
+    margin:5px;
+    color:#4d6cd3;
 }
 
 .pdf_viewer{
@@ -240,9 +278,3 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
     margin:3px;
 }
 
-.genres a{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    text-decoration: none;
-}
