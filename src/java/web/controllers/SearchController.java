@@ -59,7 +59,7 @@ public class SearchController implements Serializable {
                 book.setPageCount(rs.getInt("page_count"));
                 book.setPublishDate(rs.getInt("publish_year"));
                 book.setPublisher(rs.getString("publisher"));
-//              book.setImage(rs.getBytes("image"));
+              book.setImage(rs.getBytes("image"));
 //              book.setContent(rs.getBytes("content"));
                 book.setDescr(rs.getString("descr"));
                 currentBookList.add(book);

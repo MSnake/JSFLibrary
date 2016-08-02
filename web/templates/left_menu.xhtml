@@ -14,15 +14,15 @@
             <h4>#{msg.genres}</h4>
 
 
-            <h:dataTable value="#{genres.genreList}" var="g" styleClass="genres">
+            <h:form styleClass="genres">
 
-                    <h:column>
-                        <h:link value = "#{g.name}">
-                            <f:param name="genre_id" value="#{g.id}"/>
-                        </h:link>
-                    </h:column>
-
-                </h:dataTable>
+                <ui:repeat value="#{genreController.genreList}" var="g">
+                    <h:commandLink action="#{searchController.fillBooksByGenre()}" value="#{g.name}">
+                        <f:param name="genre_id" value="#{g.id}" />
+                    
+                    </h:commandLink>
+                </ui:repeat>
+            </h:form>
                 
                 
         </ui:composition>

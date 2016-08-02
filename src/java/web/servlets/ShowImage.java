@@ -14,7 +14,7 @@ import web.controllers.SearchController;
 
 /**
  *
- * @author Tim
+ * @author Alex
  */
 public class ShowImage extends HttpServlet {
 
